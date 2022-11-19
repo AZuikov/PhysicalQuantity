@@ -1,4 +1,4 @@
-﻿namespace PhysicalQuantity
+﻿namespace PhysicalQuantity.Implementation
 {
     public class MeasurementUnit
     {
