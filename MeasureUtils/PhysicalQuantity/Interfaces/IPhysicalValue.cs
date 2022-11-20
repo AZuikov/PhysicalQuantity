@@ -9,6 +9,10 @@ namespace PhysicalQuantity.Interfaces
     public interface IPhysicalValue
     {
         /// <summary>
+        /// Физическая величина.
+        /// </summary>
+        IPhysicalQuantity PhysicalQuantity { get; }
+        /// <summary>
         /// Числовое значение физической величины.
         /// </summary>
         decimal Value { get; }

@@ -4,18 +4,21 @@ namespace PhysicalQuantity.Implementation
 {
     public class PhysicalValue : IPhysicalValue
     {
-        public PhysicalValue(decimal value, IPhysicalMultiplier multiplier)
+        public PhysicalValue(IPhysicalQuantity physicalQuantity, decimal value, IPhysicalMultiplier multiplier)
         {
             Value = value;
             Multiplier = multiplier;
+            PhysicalQuantity = physicalQuantity;
         }
 
-        public PhysicalValue()
+        public PhysicalValue(IPhysicalQuantity physicalQuantity)
         {
+            PhysicalQuantity = physicalQuantity;
             Value = default;
-            
+            Multiplier = default;
         }
 
+        public IPhysicalQuantity PhysicalQuantity { get; }
         public decimal Value { get; }
         public IPhysicalMultiplier Multiplier { get; }
         public void Set(IPhysicalValue value)

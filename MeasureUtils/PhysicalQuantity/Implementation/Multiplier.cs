@@ -11,6 +11,6 @@ namespace PhysicalQuantity.Implementation
         }
 
         public string TextRepresentation { get; }
-        public decimal Value { get; }
+        public decimal Value { get; } = 1;
     }
 }
